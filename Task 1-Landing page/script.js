@@ -18,7 +18,7 @@ category.addEventListener("blur", function () {
 const search = document.getElementById("search");
 const searchContainer = document.getElementById("serachContainer");
 search.addEventListener("focus", function () {
-  searchContainer.style.border = "thin solid #388e3b";
+  searchContainer.style.border = "2px solid var(--accent)";
 });
 search.addEventListener("blur", function () {
   searchContainer.style.border = "";

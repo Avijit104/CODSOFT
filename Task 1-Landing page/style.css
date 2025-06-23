@@ -1,10 +1,13 @@
 :root {
   --primary: #ffffff;
-  --secondary: #43a046;
-  --accent: #388e3b;
-  --tint: #e8f5e9;
+  --secondary: #04c370;
+  --accent: #34946b;
+  --tint: #e9faea;
   --trans: #ffffff00;
   --text: #000000;
+}
+:root::-webkit-scrollbar {
+  display: none;
 }
 * {
   padding: 0;
@@ -26,7 +29,7 @@
 /* navbar */
 #navbar {
   width: 100%;
-  height: 7vh;
+  height: 8vh;
   display: flex;
   justify-content: space-between;
   padding: 5px 30px;
@@ -60,10 +63,16 @@
   font-size: 1rem;
   color: var(--text);
 }
+.search-container input::placeholder {
+  color: var(--text);
+}
 #searchBtn,
 #search {
   border: none;
   outline: none;
+}
+#searchBtn svg {
+  fill: var(--text);
 }
 
 /* navbar options  */
@@ -146,12 +155,76 @@
   );
 }
 
-main .hero {
+.hero {
   width: 100vw;
-  height: 90vh;
-  border: 1px solid black;
+  height: 80vh;
+  /* border: 1px solid black; */
   background-color: var(--tint);
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 20px;
+}
+
+.hero-image {
+  background-image: url("./image/hero.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 35%;
+  aspect-ratio: 1/1;
+}
+.hero-text {
+  width: 35%;
+  aspect-ratio: 1/1;
+  align-content: center;
+  /* line-height: 2; */
+  text-align: center;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  color: var(--secondary);
+  font-weight: bolder;
+  line-height: 1;
+}
+.hero-text p {
+  font-size: 1rem;
+  color: var(--text);
+  margin-top: 10px;
+}
+.hero-text button {
+  padding: 10px 30px;
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--primary);
+  background-color: var(--secondary);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+#buyNowIcon svg {
+  fill: var(--primary);
+}
+
+.brand {
+  width: 100vw;
+  height: 12vh;
+  align-content: center;
+}
+.brand-images {
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+}
+.brand-images img {
+  width: 10%;
+  object-fit: contain;
+  object-position: center;
 }
