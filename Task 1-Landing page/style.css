@@ -1,0 +1,157 @@
+:root {
+  --primary: #ffffff;
+  --secondary: #43a046;
+  --accent: #388e3b;
+  --tint: #e8f5e9;
+  --trans: #ffffff00;
+  --text: #000000;
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* all button icons */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon svg {
+  fill: var(--secondary);
+}
+
+/* navbar */
+#navbar {
+  width: 100%;
+  height: 7vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 30px;
+  align-items: center;
+}
+/* logo  */
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.logo span {
+  color: var(--secondary);
+}
+
+/* serach  */
+.search-container {
+  display: flex;
+  background-color: var(--tint);
+  width: 25%;
+  justify-content: center;
+  padding: 7px 20px;
+  border-radius: 30px;
+}
+.search-container input:focus-within {
+  border: 2px solid var(--accent);
+}
+.search-container input {
+  width: 90%;
+  background-color: var(--trans);
+  padding: 5px;
+  font-size: 1rem;
+  color: var(--text);
+}
+#searchBtn,
+#search {
+  border: none;
+  outline: none;
+}
+
+/* navbar options  */
+.nav-elements {
+  width: 40%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 7%;
+  box-sizing: border-box;
+}
+.nav-elements li {
+  list-style: none;
+  justify-items: center;
+  position: relative;
+}
+.nav-elements button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  font-size: 1rem;
+  gap: 5px;
+  font-weight: bold;
+  color: var(--secondary);
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+.nav-elements button:hover {
+  transform: scale(1.05);
+}
+
+/* signup button  */
+#signup {
+  background-color: var(--secondary);
+  padding: 6px 20px;
+  color: var(--primary);
+  border-radius: 5px;
+  margin-right: 20px;
+}
+#signup .icon svg {
+  fill: var(--primary);
+}
+
+/* category menu  */
+.menu {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  margin-top: 2px;
+  left: -30px;
+  top: 40px;
+}
+.menu li {
+  width: 100%;
+  display: block;
+}
+.menu button {
+  width: 100%;
+  border-radius: 0px;
+  padding: 7px 20px;
+  border: 1px solid var(--accent);
+}
+.menu button:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+  transform: none;
+}
+
+.accent {
+  width: 100vw;
+  height: 3px;
+  background: linear-gradient(
+    to left,
+    var(--trans),
+    var(--accent),
+    var(--trans)
+  );
+}
+
+main .hero {
+  width: 100vw;
+  height: 90vh;
+  border: 1px solid black;
+  background-color: var(--tint);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
