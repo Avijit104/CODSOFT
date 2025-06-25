@@ -5,6 +5,7 @@
   --tint: #e9faea;
   --trans: #ffffff00;
   --text: #000000;
+  font-size: 1vw;
 }
 :root::-webkit-scrollbar {
   display: none;
@@ -21,9 +22,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 20%;
+  aspect-ratio: 1/1;
+  /* border: 1px solid black; */
 }
 .icon svg {
   fill: var(--secondary);
+  width: 100%;
+  /* border: 2px solid red; */
 }
 
 /* navbar */
@@ -50,6 +56,7 @@
   background-color: var(--tint);
   width: 25%;
   justify-content: center;
+  align-items: center;
   padding: 7px 20px;
   border-radius: 30px;
 }
@@ -57,7 +64,7 @@
   border: 2px solid var(--accent);
 }
 .search-container input {
-  width: 90%;
+  width: 900%;
   background-color: var(--trans);
   padding: 5px;
   font-size: 1rem;
@@ -66,13 +73,23 @@
 .search-container input::placeholder {
   color: var(--text);
 }
-#searchBtn,
 #search {
   border: none;
   outline: none;
 }
+#searchBtn {
+  width: 20vw;
+  aspect-ratio: 1/1;
+}
+#searchBtn .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 #searchBtn svg {
-  fill: var(--text);
+  fill: var(--secondary);
+  width: 100%;
 }
 
 /* navbar options  */
@@ -81,27 +98,30 @@
   display: flex;
   justify-content: end;
   align-items: center;
-  gap: 7%;
+  gap: 5%;
   box-sizing: border-box;
 }
 .nav-elements li {
+  width: 25%;
   list-style: none;
   justify-items: center;
   position: relative;
 }
 .nav-elements button {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--primary);
-  font-size: 1rem;
+  font-size: 1.2rem;
   gap: 5px;
   font-weight: bold;
   color: var(--secondary);
   border-radius: 30px;
-  border: none;
+  /* border: 1px solid black; */
   outline: none;
   box-sizing: border-box;
+  cursor: pointer;
 }
 .nav-elements button:hover {
   transform: scale(1.05);
@@ -137,6 +157,7 @@
   border-radius: 0px;
   padding: 7px 20px;
   border: 1px solid var(--accent);
+  cursor: pointer;
 }
 .menu button:hover {
   background-color: var(--secondary);
@@ -183,7 +204,7 @@
 }
 
 .hero-text h2 {
-  font-size: 2.5rem;
+  font-size: 2.5vw;
   color: var(--secondary);
   font-weight: bolder;
   line-height: 1;
@@ -194,6 +215,7 @@
   margin-top: 10px;
 }
 .hero-text button {
+  width: 30%;
   padding: 10px 30px;
   display: flex;
   justify-self: center;
@@ -208,9 +230,11 @@
   border-radius: 5px;
   border: none;
   outline: none;
+  cursor: pointer;
 }
-#buyNowIcon svg {
+.hero-text svg {
   fill: var(--primary);
+  width: 100%;
 }
 
 .brand {
@@ -227,4 +251,80 @@
   width: 10%;
   object-fit: contain;
   object-position: center;
+}
+
+.slider {
+  width: 100vw;
+  height: 60vh;
+  /* border: 1px solid black; */
+  justify-items: center;
+  align-content: center;
+  background-color: var(--tint);
+}
+.slider-window {
+  width: 95vw;
+  border: 3px solid var(--secondary);
+  height: 50vh;
+  /* border: 2px solid rgb(255, 0, 0); */
+  overflow: hidden;
+  border-radius: 10px;
+}
+.slider-container {
+  position: relative;
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  /* border: 1px solid rgb(51, 255, 0); */
+  /* overflow: scroll; */
+  left: 0vw;
+}
+.slider-content {
+  /* position: relative; */
+  width: 95vw;
+  height: 50vh;
+  /* border: 1px solid rgb(17, 0, 255); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  background-color: var(--primary);
+  /* background-color: #000000; */
+  /* color: var(--primary); */
+}
+
+.slider-content h2 {
+  font-size: 2rem;
+  color: var(--secondary);
+  margin-bottom: 20px;
+}
+.slider-content p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  /* color: var(--text); */
+  margin: 10px 0px;
+}
+.slider-content ul {
+  list-style-type: "- ";
+  font-size: 1.1rem;
+  line-height: 1.02;
+  margin-left: 40px;
+}
+.slider-content img {
+  width: 300px;
+  height: 300px;
+  /* border: 1px solid black; */
+  object-fit: contain;
+}
+.add-to-cart {
+  padding: 7px 20px;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: var(--secondary);
+  color: var(--primary);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  display: block;
+  justify-self: center;
 }

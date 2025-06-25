@@ -23,3 +23,35 @@ search.addEventListener("focus", function () {
 search.addEventListener("blur", function () {
   searchContainer.style.border = "";
 });
+
+const sliderContainer = document.getElementById("slider");
+const slides = sliderContainer.querySelectorAll(".slider-content");
+const totalSlides = slides.length;
+let currentSlide = 1;
+const firstClone = slides[0].cloneNode(true);
+const lastClone = slides[totalSlides - 1].cloneNode(true);
+sliderContainer.appendChild(firstClone);
+sliderContainer.insertBefore(lastClone, slides[0]);
+console.log(totalSlides);
+sliderContainer.style.left = `-${95 * currentSlide}vw`;
+sliderContainer.style.transition = "left 1s ease-in-out";
+function moveToSlide(index) {
+  sliderContainer.style.transition = "left 1s ease-in-out";
+  sliderContainer.style.left = `-${95 * index}vw`;
+}
+function jumpToSlide(index) {
+  sliderContainer.style.transition = "none";
+  sliderContainer.style.left = `-${95 * index}vw`;
+}
+setInterval(() => {
+  currentSlide++;
+  moveToSlide(currentSlide);
+  setTimeout(() => {
+    if (currentSlide === totalSlides + 1) {
+      console.log(currentSlide);
+      currentSlide = 1;
+      jumpToSlide(currentSlide);
+    }
+  }, 1000);
+}, 3000);
+showSlide(currentSlide);
