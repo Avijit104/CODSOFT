@@ -54,4 +54,18 @@ setInterval(() => {
     }
   }, 1000);
 }, 3000);
-showSlide(currentSlide);
+
+const git = document.getElementById("github");
+git.addEventListener("click", function () {
+  window.open("https://github.com/Avijit104", "_blank");
+});
+
+const insta = document.getElementById("instagram");
+insta.addEventListener("click", function () {
+  window.open("https://www.instagram.com/raj_ash_244/", "_blank");
+});
+
+const tw = document.getElementById("twiter");
+tw.addEventListener("click", function () {
+  window.open("https://x.com/avijitash358269", "_blank");
+});
