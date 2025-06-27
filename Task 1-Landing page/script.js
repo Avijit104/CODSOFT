@@ -1,3 +1,4 @@
+// catagory menu display and hide functionality
 const category = document.getElementById("categoryBtn");
 const menu = document.getElementById("menu");
 let catFlag = false;
@@ -15,6 +16,7 @@ category.addEventListener("blur", function () {
   catFlag = false;
 });
 
+// search bar focus and blur functionality
 const search = document.getElementById("search");
 const searchContainer = document.getElementById("serachContainer");
 search.addEventListener("focus", function () {
@@ -24,6 +26,7 @@ search.addEventListener("blur", function () {
   searchContainer.style.border = "";
 });
 
+// slider functuionality
 const sliderContainer = document.getElementById("slider");
 const slides = sliderContainer.querySelectorAll(".slider-content");
 const totalSlides = slides.length;
