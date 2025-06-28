@@ -11,33 +11,114 @@
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo"></div>
+            <a href="#hero">
+                <div class="logo"></div>
+            </a>
             <ul>
                 <li>
-                    <a>About</a>
+                    <a href="#about">About&nbsp;Me</a>
                 </li>
                 <li>
-                    <a>Projects</a>
+                    <a href="#projects">Projects</a>
                 </li>
                 <li>
                     <a>Contact</a>
                 </li>
             </ul>
         </nav>
-        <main>
-            <section class="hero">
-                <div class="hero-img"></div>
-                <div class="hero-text">
-                    <h2>Hello I am <span>Avijit Ash</span></h2>
-                    <p>A Web Devloper who . . .</p>
-                    <p>I speak fluent <span>HTML</span>, <span>CSS</span>, and a bit of caffeine!</span></p>
-                </div>
-            </section>
-            <section class="about">
-
-            </section>
-        </main>
     </header>
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero-img"></div>
+            <div class="hero-text">
+                <h2>Hello I am <span>Avijit Ash</span></h2>
+                <p>A Web Devloper who . . .</p>
+                <p>Speaks fluent <span>HTML</span>, <span>CSS</span>, and <span>JavaScript</span> with a bit of
+                    caffeine!</span></p>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="about-text">
+                <h2>I am a Web Devloper, Student</h2>
+                <p>
+                    currently a final year student at Narula Institue of Technology in Computer Science & Engineering
+                    department,
+                </p>
+                <p>
+                    I have completed my Diploma at K.G Engineering Institute in Computer & Technology with overall GPA
+                    of
+                    8.8
+                </p>
+            </div>
+        </section>
+        <section class="my-skills">
+            <h2>Skills</h2>
+            <p>I have knowledge in technologies like </p>
+            <div class="skills-container">
+                <div class="skills">
+                    <img src="./image/html.webp" alt="html">
+                    <h2>HTML</h2>
+                </div>
+                <div class="skills">
+                    <img src="./image/css.webp" alt="html">
+                    <h2>CSS</h2>
+                </div>
+                <div class="skills">
+                    <img src="./image/js.png" alt="css">
+                    <h2>JavaScript</h2>
+                </div>
+                <div class="skills">
+                    <img src="./image/react.png" alt="css">
+                    <h2>React</h2>
+                </div>
+                <div class="skills">
+                    <img src="./image/mongodb.png" alt="css">
+                    <h2>CSS</h2>
+                </div>
+                <div class="skills">
+                    <img src="./image/node.png" alt="css">
+                    <h2>Node Js</h2>
+                </div>
+                <div class="skills">
+                    <img src="./image/java.webp" alt="css">
+                    <h2>Java</h2>
+                </div>
+                <div class="skills">
+                    <img src="./image/puthon.png" alt="css">
+                    <h2>Python</h2>
+                </div>
+            </div>
+            <p>
+                I am also familiar with Git and GitHub.
+            </p>
+        </section>
+        <section class="my-projects" id="projects">
+            <h2>My Projects</h2>
+            <div class="project-container">
+                <div class="projects">
+                    <img src="./image/epark.png" alt="epark">
+                    <div class="desc" id="epark">
+                        <h3>E Park</h3>
+                        <p>This is a web application for booking parking spots and in this you can list your own parking
+                            sopts also</p>
+                        <p>In this I used html, css and js for forntend and php and mySql for backend</p>
+                    </div>
+                </div>
+                <div class="projects">
+                    <div class="desc" id="tale">
+                        <h3>The Tale of Earth</h3>
+                        <p>This is a simple project which tells a story about saving our planet Earth </p>
+                        <p>This project was created with a team for NASA Space App compition </p>
+                        <a href="https://thetaleofearth.netlify.app/" target="_blank">Live Link</a>
+                    </div>
+                    <img src="./image/tale.png" alt="tale of earth">
+                </div>
+            </div>
+        </section>
+        <section class="resume">
+            <button>Download Resume</button>
+        </section>
+    </main>
 
 </body>
 

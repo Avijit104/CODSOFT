@@ -15,6 +15,9 @@
   box-sizing: border-box;
   /* background-color: black; */
 }
+:root::-webkit-scrollbar {
+  display: none;
+}
 .navbar {
   width: 100vw;
   display: flex;
@@ -36,9 +39,14 @@
   border: none;
   outline: none;
   padding: 10px 20px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
+  text-decoration: none;
+}
+.navbar ul a:hover {
+  transform: scale(1.1);
+  text-decoration: underline;
 }
 .logo {
   width: 60px;
@@ -50,18 +58,18 @@
 }
 .hero {
   width: 100vw;
-  height: 80vh;
+  height: 90vh;
   background-color: var(--primary-color);
   color: var(--primary-text-color);
   padding: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10%;
+  gap: 8%;
 }
 .hero-img {
-  width: 300px;
-  height: 300px;
+  width: 30%;
+  aspect-ratio: 1/1;
   background-image: url(./image/avijit.jpeg);
   background-position: center;
   background-size: contain;
@@ -70,8 +78,12 @@
   box-shadow: var(--primary-border-color) 10px 10px 100px;
 }
 
+.hero-text {
+  /* border: 1px solid white; */
+  width: 30%;
+}
 .hero-text h2 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: var(--primary-text-color);
   margin-bottom: 40px;
 }
@@ -80,7 +92,155 @@
   font-weight: bold;
 }
 .hero-text p {
+  font-size: 1.4rem;
+  color: var(--primary-text-color);
+  margin-top: 10px;
+}
+.about {
+  width: 100vw;
+  padding: 100px 0px;
+  box-sizing: border-box;
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+  justify-items: center;
+  align-content: center;
+}
+.about-text {
+  width: 70%;
+}
+.about-text h2 {
+  width: 100%;
+  font-size: 2rem;
+  color: var(--secondary-text-color);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.about-text p {
+  border: 1px solid black;
+  font-size: 1.2rem;
+  margin-left: 100px;
+  /* width: 80%; */
+}
+.my-skills {
+  width: 100vw;
+  /* display: flex; */
+  padding: 20px;
+  background-color: var(--primary-color);
+  /* border: 50px solid var(--primary-border-color); */
+}
+.my-skills h2 {
+  width: 100%;
+  font-size: 2rem;
+  color: var(--secondary-text-color);
+  margin-bottom: 20px;
+  overflow: hidden;
+  text-align: center;
+}
+.my-skills p {
   font-size: 1.2rem;
   color: var(--primary-text-color);
-  margin-top: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.skills-container {
+  width: 90%;
+  height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--primary-color);
+  margin: 10px auto;
+}
+.skills {
+  width: 250px;
+  height: 300px;
+  justify-items: center;
+  align-content: center;
+  border: 1px solid var(--primary-border-color);
+  border-radius: 10px;
+}
+.skills img {
+  display: block;
+  width: 100px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  object-position: center;
+  border: 3px solid var(--primary-border-color);
+  border-radius: 50%;
+  box-shadow: var(--acent-color) 0px 0px 100px;
+}
+.skills h2 {
+  font-size: 1.5rem;
+  color: var(--secondary-text-color);
+  text-align: center;
+  margin-top: 50px;
+}
+.my-projects {
+  width: 100vw;
+  padding: 50px 0px;
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+  justify-items: center;
+}
+.my-projects h2 {
+  width: 100%;
+  font-size: 2rem;
+  color: var(--secondary-text-color);
+  margin-bottom: 0px;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+.project-container {
+  width: 70%;
+  background-color: var(--primary-color);
+}
+.projects {
+  display: flex;
+  margin-bottom: 50px;
+  width: 100%;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.projects img {
+  width: 400px;
+  height: 200px;
+  object-fit: cover;
+  border: 3px solid var(--primary-border-color);
+  box-shadow: var(--acent-color) 0px 0px 100px;
+  border-radius: 20px;
+}
+.desc {
+  width: 50%;
+}
+.desc h3 {
+  font-size: 1.5rem;
+  color: var(--secondary-text-color);
+  margin-bottom: 20px;
+}
+.desc p {
+  font-size: 1rem;
+  color: var(--primary-text-color);
+  margin-bottom: 10px;
+}
+.desc a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--secondary-text-color);
+}
+.desc a:hover {
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+#epark {
+  text-align: left;
+}
+#tale {
+  text-align: right;
 }
