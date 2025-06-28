@@ -350,3 +350,21 @@ a svg {
   height: 100%;
   fill: var(--secondary-text-color);
 }
+
+footer {
+  width: 100vw;
+  background-color: var(--secondary-color);
+  padding: 50px 150px;
+  color: var(--primary-text-color);
+  font-size: 1rem;
+  font-weight: bold;
+}
+.footer-logo {
+  width: 60px;
+  height: 30px;
+  background-image: url(./image/logo.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+}
